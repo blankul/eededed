@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "preversion": "code -w CHANGELOG.md && git add ."
+  },
   "devDependencies": {
     "prettier": "^2.3.2"
   }
