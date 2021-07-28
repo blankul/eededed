@@ -1,0 +1,24 @@
+{
+  "nsRootName": "SxcGw",
+  "dirPath": "src/gateway",
+  "apis": [
+    "songxiaocai.cloudspeed.docApiQuery.queryByApiName",
+    "songxiaocai.cloudspeed.docApiQuery.queryByApiName",
+    "sxc.supplychain.request.querySupplierRequestPayoutPurchaseOrderDetail",
+    "sxc.supplychain.request.payout.queryRequestPayoutOrderDetail",
+    "sxc.supplychain.request.clearPurchaseOrderAdjust",
+    "songxiaocai.yunboservice.buyerWeChat.getBuyerSubscribe",
+    "songxiaocai.yunboservice.orderQuery.queryManagerOrderDetail",
+    "songxiaocai.yunboservice.authorityVerify.listYunBoPickHouseId",
+    "songxiaocai.yunboservice.afterSales.applyCheck"
+  ],
+  "tpl": {
+    "reqFileHeader": "import gateway from '@/utils/gateway'",
+    "reqFn": [
+      "export const ${fnName} = (data: ${paramsType}) => {",
+      "  return gateway<${resultType}>('${apiName}', data)",
+      "}"
+    ]
+  },
+  "formatCmd": "npx prettier --write ${glob}"
+}
